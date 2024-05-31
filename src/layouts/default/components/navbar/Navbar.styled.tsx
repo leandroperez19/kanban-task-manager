@@ -7,6 +7,7 @@ export const NavbarWrapper = styled.nav`
     padding-inline: 16px;
     background-color: ${({ theme }) => theme.navbar.background};
     position: relative;
+    z-index: 100;
 
     .left {
         .tab-name {

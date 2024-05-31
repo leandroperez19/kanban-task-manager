@@ -5,9 +5,11 @@ import { useScreen } from "@/hooks/useScreen";
 import Button from "@/components/button/Button";
 import dots from '@/assets/icons/dots.svg';
 import BoardDialog from "./components/boardDialog/BoardDialog";
+import { useLayout } from "@/hooks/useLayout";
 
 const Navbar: FC = () => {
-    const { isMobile } = useScreen(768);
+    const { isMobile } = useScreen();
+    const { boardDialogOpen, boardDialogToggle } = useLayout();
 
     return (
         <NavbarWrapper>
@@ -16,7 +18,7 @@ const Navbar: FC = () => {
                     <img src={logo} alt="logo" />
                     {!isMobile && <h1 className="text-2xl">kanban</h1>}
                 </div>
-                <div className="tab-name ml-4 flex gap-2 items-center">
+                <div className="tab-name ml-4 flex gap-2 items-center" onClick={() => isMobile && boardDialogToggle()}>
                     <span className="text-lg font-bold">Platform Launch</span>
                     <span className="material-symbols-outlined text-base">keyboard_arrow_down</span>
                 </div>
@@ -27,7 +29,7 @@ const Navbar: FC = () => {
                 </Button>
                 <img src={dots} alt="more" className="h-4"/>
             </div>
-            <BoardDialog />
+            {boardDialogOpen && <BoardDialog />}
         </NavbarWrapper>
     );
 };
