@@ -42,6 +42,7 @@ const darkTheme: DefaultTheme = {
         textPrimary: colors.mediumGray,
         textSecondary: colors.white,
         textTertiary: colors.purple,
+        textDanger: colors.red
     },
 };
 

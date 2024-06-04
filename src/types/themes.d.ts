@@ -53,7 +53,8 @@ declare module 'styled-components' {
       highlightBackground: string,
       textPrimary: string,
       textSecondary: string,
-      textTertiary: string
+      textTertiary: string,
+      textDanger: string
     }
   }
 }

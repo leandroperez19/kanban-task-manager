@@ -6,10 +6,11 @@ import Button from "@/components/button/Button";
 import dots from '@/assets/icons/dots.svg';
 import BoardDialog from "./components/boardDialog/BoardDialog";
 import { useLayout } from "@/hooks/useLayout";
+import MoreDialog from "./components/moreDialog/MoreDialog";
 
 const Navbar: FC = () => {
     const { isMobile } = useScreen();
-    const { boardDialogOpen, boardDialogToggle } = useLayout();
+    const { boardDialogOpen, boardDialogToggle, moreDialogOpen, moreDialogToggle } = useLayout();
 
     return (
         <NavbarWrapper>
@@ -27,9 +28,11 @@ const Navbar: FC = () => {
                 <Button size="sm" className="w-12" disabled>
                     <span className="material-symbols-outlined text-base">add</span>
                 </Button>
-                <img src={dots} alt="more" className="h-4"/>
+                <img src={dots} alt="more" className="dots h-4" onClick={moreDialogToggle}/>
             </div>
             {boardDialogOpen && <BoardDialog />}
+            {moreDialogOpen && <MoreDialog />}
+            {/* <MoreDialog /> */}
         </NavbarWrapper>
     );
 };
