@@ -18,6 +18,10 @@ export const MoreDialogWrapper = styled.div`
     @keyframes slideInX {
         100% {
             right: 16px;
+            
+            @media (768px <= width) {
+                right: 24px;
+            }
         }
     }
 
@@ -27,6 +31,10 @@ export const MoreDialogWrapper = styled.div`
         @keyframes slideOutX {
             0% {
                 right: 16px;
+
+                @media (768px <= width) {
+                    right: 24px;
+                }
             }
             100% {
                 right: -100%;

@@ -9,15 +9,15 @@ type ButtonWrapperProps = {
 
 const getSize = (size: ButtonWrapperProps["$size"]) => {
     const map = {
-        sm: { mobile: "32px", desktop: "35px" },
-        regular: { mobile: "40px", desktop: "45px" },
-        lg: { mobile: "47px", desktop: "55px" },
+        sm: "32px",
+        regular: "40px",
+        lg: "48px",
     } as const;
-    return map[size] ?? { mobile: "40px", desktop: "45px" };
+    return map[size] ?? "40px";
 };
 
 export const ButtonWrapper = styled.button<ButtonWrapperProps>`
-    height: ${({ $size }) => getSize($size).mobile};
+    height: ${({ $size }) => getSize($size)};
     background-color: ${({ theme, $color }) => theme.buttons[$color].background};
     color: ${({ theme, $color }) => theme.buttons[$color].color};
     border-radius: 24px;

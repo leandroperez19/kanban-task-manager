@@ -15,7 +15,8 @@ declare module 'styled-components' {
     }
     navbar: {
       background: string,
-      icons: string
+      icons: string,
+      border: string
     }
     page: {
       background: string

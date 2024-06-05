@@ -20,6 +20,7 @@ const darkTheme: DefaultTheme = {
     navbar: {
         background: colors.darkGray,
         icons: colors.purple,
+        border: colors.gray
     },
     buttons: {
         primary: {

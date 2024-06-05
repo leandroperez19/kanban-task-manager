@@ -19,7 +19,8 @@ const lightTheme: DefaultTheme = {
     },
     navbar: {
         background: colors.white,
-        icons: colors.purple
+        icons: colors.purple,
+        border: colors.lightGray
     },
     buttons: {
         primary: {
