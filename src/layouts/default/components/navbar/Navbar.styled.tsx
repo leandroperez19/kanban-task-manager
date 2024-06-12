@@ -1,12 +1,18 @@
 import { flex } from "@/styles/Mixins";
 import styled from "styled-components";
 
-export const NavbarWrapper = styled.nav`
+type NavbarWrapperProps = {
+    $sidebarOpen: boolean
+}
+
+export const NavbarWrapper = styled.nav<NavbarWrapperProps>`
     height: 64px;
     ${flex('center', 'space-between')}
     padding-inline: 16px;
     background-color: ${({ theme }) => theme.navbar.background};
-    position: relative;
+    position: absolute;
+    width: 100%;
+    left: 0;
     z-index: 100;
 
     @media (768px <= width) {
@@ -24,7 +30,8 @@ export const NavbarWrapper = styled.nav`
 
         .logo {
             @media (768px <= width) {
-                padding-right: 24px;
+                transition: padding-right .3s ease;
+                padding-right: ${({ $sidebarOpen }) => $sidebarOpen ? '92px' : '24px'};
                 border-right: 1px solid ${({ theme }) => theme.navbar.border};
             }
         }

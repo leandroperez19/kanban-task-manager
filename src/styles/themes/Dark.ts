@@ -6,6 +6,7 @@ const darkTheme: DefaultTheme = {
     palette: {
         text: {
             primary: colors.white,
+            secondary: colors.mediumGray
         },
         common: {
             white: colors.white,

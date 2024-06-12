@@ -5,7 +5,8 @@ const lightTheme: DefaultTheme = {
     type: 'light',
     palette: {
         text: {
-            primary: colors.black
+            primary: colors.black,
+            secondary: colors.mediumGray
         },
         common: {
             white: colors.white,

@@ -7,6 +7,8 @@ export type LayoutContextProps = {
     boardDialogToggle: () => void;
     moreDialogOpen: boolean;
     moreDialogToggle: () => void;
+    sidebarOpen: boolean;
+    sidebarToggle: () => void;
 }
 
 export default LayoutContext;

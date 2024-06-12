@@ -5,7 +5,8 @@ declare module 'styled-components' {
     type: 'light' | 'dark'
     palette: {
       text: {
-        primary: string
+        primary: string,
+        secondary: string
       },
       common: {
         white: string,

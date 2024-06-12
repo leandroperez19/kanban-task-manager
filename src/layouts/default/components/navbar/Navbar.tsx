@@ -13,11 +13,11 @@ import { useTheme } from "@/hooks/useTheme";
 
 const Navbar: FC = () => {
     const { isMobile } = useScreen();
-    const { boardDialogOpen, boardDialogToggle, moreDialogOpen, moreDialogToggle } = useLayout();
+    const { boardDialogOpen, boardDialogToggle, moreDialogOpen, moreDialogToggle, sidebarOpen } = useLayout();
     const { theme } = useTheme()
 
     return (
-        <NavbarWrapper>
+        <NavbarWrapper $sidebarOpen={sidebarOpen}>
             <div className="left flex items-center h-full">
                 <div className="logo flex gap-4 h-full items-center">
                     <img src={logo} alt="logo" className="h-6"/>
