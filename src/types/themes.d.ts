@@ -56,7 +56,13 @@ declare module 'styled-components' {
       textPrimary: string,
       textSecondary: string,
       textTertiary: string,
-      textDanger: string
+      textDanger: string,
+      hoverBackground: string
+    },
+    toggle: {
+      background: string,
+      ball: string,
+      hoverBackground: string
     }
   }
 }

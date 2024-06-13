@@ -44,7 +44,13 @@ const lightTheme: DefaultTheme = {
         textPrimary: colors.mediumGray,
         textSecondary: colors.white,
         textTertiary: colors.purple,
-        textDanger: colors.red
+        textDanger: colors.red,
+        hoverBackground: colors.purple + '22'
+    },
+    toggle: {
+        background: colors.purple,
+        ball: colors.white,
+        hoverBackground: colors.lightPurple,
     },
 }
 

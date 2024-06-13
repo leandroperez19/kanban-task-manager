@@ -9,9 +9,9 @@ const ThemeToggle: FC = () => {
     const { toggleTheme, theme } = useTheme();
 
     return (
-        <ThemeToggleWrapper onClick={toggleTheme}>
+        <ThemeToggleWrapper>
             <img src={sun} alt="sun" />
-            <Toggle toggled={theme.type === "dark"} />
+            <Toggle toggled={theme.type === "dark"} onChange={toggleTheme}/>
             <img src={moon} alt="moon" />
         </ThemeToggleWrapper>
     );

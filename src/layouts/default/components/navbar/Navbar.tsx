@@ -24,7 +24,7 @@ const Navbar: FC = () => {
                     {!isMobile && <img src={theme.type === 'dark' ? kanban : kanbanBlack} alt="kanban" className="kanban h-6"/>}
                 </div>
                 <div className="tab-name ml-4 flex gap-2 items-center md:gap-0 md:ml-6" onClick={() => isMobile && boardDialogToggle()}>
-                    <span className="text-lg font-bold md:text-xl">Platform Launch</span>
+                    <span className="text-lg font-bold md:text-xl lg:text-2xl">Platform Launch</span>
                     {isMobile && <span className="material-symbols-outlined text-base">keyboard_arrow_down</span>}
                 </div>
             </div>
@@ -33,7 +33,7 @@ const Navbar: FC = () => {
                     <span className="material-symbols-outlined text-base md:mt-1">add</span>
                     {!isMobile && <span>Add New Task</span>}
                 </Button>
-                <img src={dots} alt="more" className="dots h-4 md:h-5" onClick={moreDialogToggle}/>
+                <img src={dots} alt="more" className="dots h-4 md:h-5 cursor-pointer" onClick={moreDialogToggle}/>
             </div>
             {boardDialogOpen && <BoardDialog />}
             {moreDialogOpen && <MoreDialog />}

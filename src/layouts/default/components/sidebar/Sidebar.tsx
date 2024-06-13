@@ -25,7 +25,7 @@ const Sidebar: FC = () => {
 
     return (
         <SidebarWrapper ref={ref} className={sidebarOpen ? 'open' : 'closing'}>
-            <div className="logo flex gap-4 items-center ml-6 min-w-52">
+            <div className="logo flex gap-4 items-center ml-6 min-w-52 lg:ml-8">
                 <img src={logo} alt="logo" className="h-6" />
                 {!isMobile && (
                     <img

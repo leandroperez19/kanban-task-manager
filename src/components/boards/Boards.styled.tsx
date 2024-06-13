@@ -8,6 +8,10 @@ export const BoardsWrapper = styled.div`
         text-align: left;
         color: #828fa3;
         min-width: 130px;
+
+        @media (1024px <= width) {
+            margin-inline: 32px;
+        }
     }
 
     .boards {
@@ -21,10 +25,17 @@ export const BoardsWrapper = styled.div`
             height: 48px;
             border-radius: 0 32px 32px 0;
             min-width: 240px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            @media (1024px <= width) {
+                padding-inline: 32px;
+            }
 
             h5 {
                 font-weight: bold;
                 font-size: 15px;
+                transition: color 0.3s ease;
             }
         }
 
@@ -35,6 +46,21 @@ export const BoardsWrapper = styled.div`
         .board {
             h5 {
                 color: ${({ theme }) => theme.dialog.textPrimary};
+            }
+
+            @media (hover: hover) {
+                &:not(.selected):hover {
+                    background-color: ${({ theme }) =>
+                        theme.dialog.hoverBackground};
+
+                    h5 {
+                        color: ${({ theme }) => theme.dialog.textTertiary};
+                    }
+
+                    svg path {
+                        fill: ${({ theme }) => theme.dialog.highlightBackground} !important;
+                    }
+                }
             }
 
             &.selected {

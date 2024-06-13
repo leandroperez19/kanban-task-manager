@@ -15,8 +15,12 @@ export const HomeWrapper = styled.div`
 `;
 
 export const EmptyBoardWrapper = styled.div`
-    ${flexCenter('column')}
+    ${flexCenter("column")}
     gap: 25px;
+
+    @media (1024px <= width) {
+        gap: 32px;
+    }
 
     h4 {
         max-width: 343px;
@@ -24,5 +28,10 @@ export const EmptyBoardWrapper = styled.div`
         font-weight: bold;
         text-align: center;
         color: ${({ theme }) => theme.palette.text.secondary};
+
+        @media (1024px <= width) {
+            max-width: unset;
+            width: fit-content;
+        }
     }
 `;

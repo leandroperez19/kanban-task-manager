@@ -24,6 +24,7 @@ export const ButtonWrapper = styled.button<ButtonWrapperProps>`
     ${flexCenter()}
     border: none;
     outline: none;
+    transition: all .3s ease;
 
     &:disabled {
         opacity: .25;
@@ -31,7 +32,14 @@ export const ButtonWrapper = styled.button<ButtonWrapperProps>`
         @media (hover: hover) {
             &:hover {
                 cursor: not-allowed;
+                background-color: ${({ theme, $color }) => theme.buttons[$color].background};
             }
+        }
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: ${({ theme, $color }) => theme.buttons[$color].hoverBackground};
         }
     }
 `;

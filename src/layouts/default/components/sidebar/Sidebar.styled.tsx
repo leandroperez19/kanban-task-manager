@@ -10,7 +10,7 @@ export const SidebarWrapper = styled.div`
     overflow: hidden;
 
     &.closing {
-        animation: sidebarClosing .3s ease forwards normal;
+        animation: sidebarClosing 0.3s ease forwards normal;
 
         @keyframes sidebarClosing {
             0% {
@@ -22,10 +22,23 @@ export const SidebarWrapper = styled.div`
                 padding-right: 0;
             }
         }
+
+        @media (1024px <= width) {
+            @keyframes sidebarClosing {
+                0% {
+                    width: 300px;
+                }
+
+                100% {
+                    width: 0;
+                    padding-right: 0;
+                }
+            }
+        }
     }
 
     &.open {
-        animation: sidebarOpening .3s ease forwards normal;
+        animation: sidebarOpening 0.3s ease forwards normal;
 
         @keyframes sidebarOpening {
             0% {
@@ -36,6 +49,20 @@ export const SidebarWrapper = styled.div`
             100% {
                 width: 260px;
                 padding-right: 20px;
+            }
+        }
+
+        @media (1024px <= width) {
+            @keyframes sidebarOpening {
+                0% {
+                    width: 0px;
+                    padding-right: 0;
+                }
+
+                100% {
+                    width: 300px;
+                    padding-right: 20px;
+                }
             }
         }
     }

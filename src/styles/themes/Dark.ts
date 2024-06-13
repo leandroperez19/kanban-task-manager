@@ -6,13 +6,13 @@ const darkTheme: DefaultTheme = {
     palette: {
         text: {
             primary: colors.white,
-            secondary: colors.mediumGray
+            secondary: colors.mediumGray,
         },
         common: {
             white: colors.white,
             black: colors.black,
-            purple: colors.purple
-        }
+            purple: colors.purple,
+        },
     },
     page: {
         background: colors.veryDarkGray,
@@ -21,7 +21,7 @@ const darkTheme: DefaultTheme = {
     navbar: {
         background: colors.darkGray,
         icons: colors.purple,
-        border: colors.gray
+        border: colors.gray,
     },
     buttons: {
         primary: {
@@ -44,7 +44,13 @@ const darkTheme: DefaultTheme = {
         textPrimary: colors.mediumGray,
         textSecondary: colors.white,
         textTertiary: colors.purple,
-        textDanger: colors.red
+        textDanger: colors.red,
+        hoverBackground: colors.white
+    },
+    toggle: {
+        background: colors.purple,
+        ball: colors.white,
+        hoverBackground: colors.lightPurple,
     },
 };
 

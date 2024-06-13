@@ -34,6 +34,10 @@ export const NavbarWrapper = styled.nav<NavbarWrapperProps>`
                 padding-right: ${({ $sidebarOpen }) => $sidebarOpen ? '92px' : '24px'};
                 border-right: 1px solid ${({ theme }) => theme.navbar.border};
             }
+
+            @media (1024px <= width) {
+                padding-right: ${({ $sidebarOpen }) => $sidebarOpen ? '132px' : '24px'};
+            }
         }
     }
 `
