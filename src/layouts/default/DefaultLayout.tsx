@@ -14,9 +14,9 @@ const DefaultLayout: FC = () => {
     return (
         <DefaultLayoutWrapper $sidebarOpen={sidebarOpen}>
             <Navbar />
-            <SidebarToggle />
+            {!isMobile && <SidebarToggle />}
             <div className="x-axis">
-                {(!isMobile) && <Sidebar />}
+                {!isMobile && <Sidebar />}
                 <main>
                     <Outlet />
                 </main>

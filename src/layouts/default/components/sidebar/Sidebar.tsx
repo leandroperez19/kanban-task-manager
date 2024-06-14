@@ -39,10 +39,10 @@ const Sidebar: FC = () => {
                 <Boards />
             </div>
             <div className="bottom absolute bottom-8 w-full flex flex-col gap-4">
-                <div className="theme-toggle mx-3 min-w-52">
+                <div className="theme-toggle mx-3 min-w-52 lg:mx-6">
                     <ThemeToggle />
                 </div>
-                <div className="hide-sidebar h-12 flex gap-2.5 items-center mx-6 min-w-52" onClick={closeSidebar}>
+                <div className="hide-sidebar h-12 flex gap-2.5 items-center mr-6 min-w-52 pl-6 lg:pl-8" onClick={closeSidebar}>
                     <img src={eye} alt="eye" />
                     <span>Hide Sidebar</span>
                 </div>

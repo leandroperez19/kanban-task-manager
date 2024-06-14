@@ -25,7 +25,7 @@ const Navbar: FC = () => {
                 </div>
                 <div className="tab-name ml-4 flex gap-2 items-center md:gap-0 md:ml-6" onClick={() => isMobile && boardDialogToggle()}>
                     <span className="text-lg font-bold md:text-xl lg:text-2xl">Platform Launch</span>
-                    {isMobile && <span className="material-symbols-outlined text-base">keyboard_arrow_down</span>}
+                    {isMobile && <span className={`material-symbols-outlined text-base ${boardDialogOpen && 'rotate-180'}`}>keyboard_arrow_down</span>}
                 </div>
             </div>
             <div className="right flex items-center gap-4 md:gap-6">

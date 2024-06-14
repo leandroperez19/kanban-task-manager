@@ -17,7 +17,14 @@ export const SidebarToggleWrapper = styled.button<SidebarToggleWrapperProps>`
     border: none;
     outline: none;
     z-index: 120;
-    transition: transform .3s .3s ease;
+    transition: transform .3s .3s ease, background-color .3s ease;
 
     transform: ${({ $sidebarOpen }) => $sidebarOpen ? 'translateX(-100%)' : 'translateX(0)'};
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: ${({ theme }) => theme.buttons.primary.hoverBackground};
+        }
+    }
+
 `;

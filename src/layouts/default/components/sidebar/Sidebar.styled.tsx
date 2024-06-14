@@ -71,6 +71,23 @@ export const SidebarWrapper = styled.div`
         .hide-sidebar {
             color: ${({ theme }) => theme.palette.text.secondary};
             font-weight: bold;
+            border-radius: 0 32px 32px 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: ${({ theme }) =>
+                        theme.dialog.hoverBackground};
+                    color: ${({ theme }) => theme.dialog.textTertiary};
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(40%)
+                            sepia(11%) saturate(3973%) hue-rotate(207deg)
+                            brightness(93%) contrast(84%);
+                    }
+                }
+            }
         }
     }
 `;

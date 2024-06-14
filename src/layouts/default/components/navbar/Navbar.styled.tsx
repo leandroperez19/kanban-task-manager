@@ -25,6 +25,7 @@ export const NavbarWrapper = styled.nav<NavbarWrapperProps>`
         .tab-name {
             .material-symbols-outlined {
                 color: ${({ theme }) => theme.navbar.icons};
+                transition: transform .3s ease;
             }
         }
 
