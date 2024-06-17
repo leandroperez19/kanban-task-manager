@@ -6,7 +6,8 @@ declare module 'styled-components' {
     palette: {
       text: {
         primary: string,
-        secondary: string
+        secondary: string,
+        danger: string
       },
       common: {
         white: string,
@@ -35,19 +36,13 @@ declare module 'styled-components' {
         hoverBackground: string
         color: string
         hoverColor: string
+      },
+      danger: {
+        background: string
+        hoverBackground: string
+        color: string
+        hoverColor: string
       }
-      // tertiary: {
-      //   background: string
-      //   hoverBackground: string
-      //   color: string
-      //   hoverColor: string
-      // }
-      // danger: {
-      //   background: string
-      //   hoverBackground: string
-      //   color: string
-      //   hoverColor: string
-      // }
     },
     dialog: {
       background: string,
@@ -63,6 +58,21 @@ declare module 'styled-components' {
       background: string,
       ball: string,
       hoverBackground: string
+    },
+    modal: {
+      background: string,
+    },
+    input: {
+      border: string,
+      color: string,
+      label: string
+    },
+    dropdown: {
+      border: string,
+      color: string,
+      label: string,
+      optionsBackground: string,
+      optionsColor: string
     }
   }
 }

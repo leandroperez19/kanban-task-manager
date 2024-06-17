@@ -41,6 +41,24 @@ const GlobalStyles = createGlobalStyle`
         max-width: 20px;
         overflow: hidden;
     }
+
+    /* extra classes */
+
+    .text-danger {
+        color: ${({ theme }) => theme.palette.text.danger};
+    }
+
+    .text-secondary {
+        color: ${({ theme }) => theme.palette.text.secondary};
+    }
+
+    .text-primary {
+        color: ${({ theme }) => theme.palette.text.primary};
+    }
+
+    .text-xs-plus {
+        font-size: 13px;
+    }
 `;
 
 export default GlobalStyles;

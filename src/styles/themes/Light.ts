@@ -6,7 +6,8 @@ const lightTheme: DefaultTheme = {
     palette: {
         text: {
             primary: colors.black,
-            secondary: colors.mediumGray
+            secondary: colors.mediumGray,
+            danger: colors.red
         },
         common: {
             white: colors.white,
@@ -31,11 +32,17 @@ const lightTheme: DefaultTheme = {
             hoverColor: colors.white
         },
         secondary: {
-            background: colors.purple,
-            color: colors.white,
+            background: colors.opaquePurple,
+            color: colors.purple,
             hoverBackground: colors.lightPurple,
             hoverColor: colors.white
-        }
+        },
+        danger: {
+            background: colors.red,
+            color: colors.white,
+            hoverBackground: colors.lightPurple,
+            hoverColor: colors.white,
+        },
     },
     dialog: {
         background: colors.white,
@@ -45,13 +52,28 @@ const lightTheme: DefaultTheme = {
         textSecondary: colors.white,
         textTertiary: colors.purple,
         textDanger: colors.red,
-        hoverBackground: colors.purple + '22'
+        hoverBackground: colors.opaquePurple
     },
     toggle: {
         background: colors.purple,
         ball: colors.white,
         hoverBackground: colors.lightPurple,
     },
+    modal: {
+        background: colors.white
+    },
+    input: {
+        color: colors.black,
+        border: colors.opaqueGray,
+        label: colors.mediumGray
+    },
+    dropdown: {
+        color: colors.black,
+        border: colors.opaqueGray,
+        label: colors.mediumGray,
+        optionsBackground: colors.gray,
+        optionsColor: colors.mediumGray
+    }
 }
 
 export default lightTheme;

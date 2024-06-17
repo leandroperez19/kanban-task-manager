@@ -8,7 +8,6 @@ export const ModalWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-
     ${flexCenter()}
 
     .background-touchable {
@@ -17,9 +16,16 @@ export const ModalWrapper = styled.div`
         left: 0;
         width: 100%;
         height: 100%;
+        opacity: 0.5;
+        background-color: ${({ theme }) => theme.palette.common.black};
     }
 
     .modal {
-
+        width: calc(100% - 16px);
+        max-width: 343px;
+        padding: 24px;
+        border-radius: 6px;
+        background-color: ${({ theme }) => theme.modal.background};
+        z-index: 300;
     }
-`
+`;

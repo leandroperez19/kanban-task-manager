@@ -7,6 +7,7 @@ const darkTheme: DefaultTheme = {
         text: {
             primary: colors.white,
             secondary: colors.mediumGray,
+            danger: colors.red
         },
         common: {
             white: colors.white,
@@ -31,7 +32,13 @@ const darkTheme: DefaultTheme = {
             hoverColor: colors.white,
         },
         secondary: {
-            background: colors.purple,
+            background: colors.white,
+            color: colors.purple,
+            hoverBackground: colors.lightPurple,
+            hoverColor: colors.white,
+        },
+        danger: {
+            background: colors.red,
             color: colors.white,
             hoverBackground: colors.lightPurple,
             hoverColor: colors.white,
@@ -52,6 +59,21 @@ const darkTheme: DefaultTheme = {
         ball: colors.white,
         hoverBackground: colors.lightPurple,
     },
+    modal: {
+        background: colors.darkGray
+    },
+    input: {
+        color: colors.white,
+        border: colors.opaqueGray,
+        label: colors.white
+    },
+    dropdown: {
+        color: colors.white,
+        border: colors.opaqueGray,
+        label: colors.white,
+        optionsBackground: colors.veryDarkGray,
+        optionsColor: colors.mediumGray
+    }
 };
 
 export default darkTheme;

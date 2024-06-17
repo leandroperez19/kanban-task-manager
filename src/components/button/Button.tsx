@@ -4,7 +4,7 @@ import { ButtonWrapper } from "./Button.styled";
 
 export interface buttonStatic {
     size: 'sm' | 'regular' | 'lg',
-    color: 'primary' | 'secondary'
+    color: 'primary' | 'secondary' | 'danger'
 }
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
